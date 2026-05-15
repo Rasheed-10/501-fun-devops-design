@@ -146,12 +146,30 @@ Automation is provided through:
 - Terraform plan/apply workflow
 - Environment approval gates for production
 
+## Repository Structure
+
+```text
 501-fun-devops-design/
 ├── architecture/
+│   ├── 501-fun-azure-architecture.drawio
+│   └── 501-fun-azure-architecture.png
 ├── docs/
+│   ├── assumptions-and-tradeoffs.md
+│   ├── observability.md
+│   ├── scalability-reliability.md
+│   └── security.md
 ├── infra/
-│   └── terraform/modules
+│   └── terraform/
+│       ├── providers.tf
+│       ├── main.tf
+│       ├── variables.tf
+│       ├── outputs.tf
+│       ├── terraform.tfvars
+│       └── modules/
 ├── pipelines/
+│   ├── app-ci-cd.yml
+│   └── infra-ci-cd.yml
+├── .gitignore
 └── README.md
 
 ## Note
