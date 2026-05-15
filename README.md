@@ -146,6 +146,10 @@ Automation is provided through:
 - Terraform plan/apply workflow
 - Environment approval gates for production
 
+## Note
+
+This submission is intended to demonstrate the proposed architecture, Infrastructure as Code structure, CI/CD approach and design reasoning. It is not intended to be a fully production-ready deployment without further environment-specific configuration, security hardening and testing.
+
 ## Repository Structure
 
 ```text
@@ -172,5 +176,4 @@ Automation is provided through:
 ├── .gitignore
 └── README.md
 
-## Note
-This submission is intended to demonstrate the proposed architecture, Infrastructure as Code structure, CI/CD approach and design reasoning. It is not intended to be a fully production-ready deployment without further environment-specific configuration, security hardening and testing.
+
