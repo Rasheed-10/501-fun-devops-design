@@ -1,5 +1,9 @@
 # 501 Fun DevOps Interview Task
 
+## High-Level Architecture
+
+![501 Fun Azure Architecture](architecture/501-fun-azure-architecture.png)
+
 ## 1. Overview
 
 This repository contains a proposed Azure infrastructure design with Cloudflare at the edge for hosting:
