@@ -5,7 +5,6 @@
 The platform can scale through:
 
 - Cloudflare CDN caching static and video content closer to users
-- Azure Front Door global routing
 - Azure Container Apps autoscaling
 - Event Hubs partitioning for high-volume ingestion
 - Service Bus queues for asynchronous processing
@@ -20,7 +19,6 @@ Reliability is improved through:
 - Event-driven design
 - Asynchronous queues
 - Retry policies
-- Dead-letter queues
 - Immutable container image tags
 - Terraform-managed infrastructure
 - Central monitoring and alerting
@@ -41,7 +39,7 @@ Resiliency is improved through:
 
 | Failure | Mitigation |
 |---|---|
-| API failure | Front Door health checks and container app revision rollback |
+| API failure | Health checks and container app revision rollback |
 | Device connectivity issue | Async messaging and retry logic |
 | Video processing failure | Queue retry and dead-letter queue |
 | Database issue | Backups, monitoring and private access |

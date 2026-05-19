@@ -12,7 +12,6 @@ Security is designed across the edge, application, infrastructure and CI/CD laye
 
 ## Azure Security
 
-- Azure Front Door WAF adds another layer of protection.
 - HTTPS is enforced for public endpoints.
 - Azure API Management can enforce authentication, throttling and request policies.
 - Azure Key Vault stores secrets and certificates.

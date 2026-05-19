@@ -16,7 +16,7 @@ This repository contains a proposed Azure infrastructure design with Cloudflare 
 
 ## 2. Architecture Summary
 
-Cloudflare is used at the edge for DNS, WAF, DDoS protection, CDN caching, bot protection and rate limiting. Traffic is routed into Azure through Azure Front Door, then to Azure Container Apps hosting the web app, APIs and background workers.
+Cloudflare is used at the edge for DNS, WAF, DDoS protection, CDN caching, bot protection and rate limiting. Traffic is routed into Azure through Azure Entry Layer, then to Azure Container Apps hosting the web app, APIs and background workers.
 
 Event Hubs is used for high-volume log ingestion, Service Bus is used for business messaging and asynchronous workflows, Blob Storage is used for video assets, and Azure Monitor/Application Insights provide observability.
 
@@ -25,13 +25,12 @@ Event Hubs is used for high-volume log ingestion, Service Bus is used for busine
 | Area | Service |
 |---|---|
 | Edge | Cloudflare |
-| Global routing | Azure Front Door |
 | Compute | Azure Container Apps |
 | API management | Azure API Management |
 | Async messaging | Azure Service Bus |
 | Event ingestion | Azure Event Hubs |
 | Video storage | Azure Blob Storage |
-| Video processing | Container Apps worker / Azure Functions |
+| Video processing | Container Apps worker |
 | Database | Azure Database for PostgreSQL |
 | Secrets | Azure Key Vault |
 | Monitoring | Azure Monitor, Log Analytics, Application Insights |
@@ -89,7 +88,6 @@ Security is built into the design using:
 
 - Cloudflare WAF, DDoS protection, bot protection and rate limiting
 - HTTPS-only access
-- Azure Front Door WAF
 - Azure Key Vault for secrets
 - Managed identities for Azure service-to-service authentication
 - Private endpoints for sensitive services
@@ -103,7 +101,6 @@ Security is built into the design using:
 The platform scales through:
 
 - Cloudflare CDN caching at the edge
-- Azure Front Door global routing
 - Azure Container Apps autoscaling
 - Event Hubs partitioning for high-volume ingestion
 - Service Bus queues for asynchronous processing
