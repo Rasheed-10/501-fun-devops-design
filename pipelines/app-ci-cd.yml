@@ -36,7 +36,7 @@ jobs:
 
       - name: Scan container image
         run: |
-          echo "Run Trivy or similar image scan here"
+          echo "Run Trivy image scan here"
 
       - name: Azure login using OIDC
         uses: azure/login@v2
